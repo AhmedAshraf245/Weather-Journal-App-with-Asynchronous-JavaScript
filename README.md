@@ -5,8 +5,4 @@
 ## Overview
 This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI. 
 
-## Instructions
-This will require modifying the `server.js` file and the `website/app.js` file. You can see `index.html` for element references, and once you are finished with the project steps, you can use `style.css` to style your application to customized perfection.
-
-## Extras
-If you are interested in testing your code as you go, you can use `tests.js` as a template for writing and running some basic tests for your code.
+This project will allow user to enter the zipcode of any city and it will give information regarding the weather of that location using info provided by **OpenWeather** also it allow user to type how he is feeling today about the weather and show the user this output 
