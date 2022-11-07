@@ -1,16 +1,16 @@
 /* Global Variables */
 
-//Adding API key and url 
+//Adding API apiKey and url 
 const weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?zip=';
-const key = '&appid=3734059046e3ec7ec64c53f70125cac5&units=imperial';
+const apiKey = '&appid=3734059046e3ec7ec64c53f70125cac5&units=imperial';
 
 // Create a new date instance dynamically with JS
 let d = new Date();
 let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
 
 //Retrieve weather data from API
-const getWeatherData = async (weatherUrl,zip,key)=>{
-    const result = await fetch(weatherUrl+zip+key);
+const getWeatherData = async (weatherUrl,zip,apiKey)=>{
+    const result = await fetch(weatherUrl+zip+apiKey);
     try {
       const data = await result.json();
       return data;
@@ -45,7 +45,7 @@ const postRouteData = async ( url = '', object = {})=>{
 document.getElementById('generate').addEventListener('click',()=>{
     const zip = document.getElementById('zip').value;
     const feelings = document.getElementById('feelings').value;
-    getWeatherData(weatherUrl,zip,key)
+    getWeatherData(weatherUrl,zip,apiKey)
     // Update the UI with the new data
     .then(function(weather){
       console.log(weather);
