@@ -1,12 +1,12 @@
 /* Global Variables */
 
 //Adding API apiKey and url 
-const weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?zip=';
 const apiKey = '&appid=3734059046e3ec7ec64c53f70125cac5&units=imperial';
+const weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?zip=';
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+let newDate = d.getMonth()+ 1 + '.'+ d.getDate()+'.'+ d.getFullYear();
 
 //Retrieve weather data from API
 const getWeatherData = async (weatherUrl,zip,apiKey)=>{
